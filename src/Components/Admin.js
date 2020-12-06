@@ -19,6 +19,7 @@ useEffect(() => {
             return item
          
         }
+        return null
        
         
      })
@@ -37,6 +38,7 @@ axios.delete(`https://medieinstitutet-wie-products.azurewebsites.net/api/orders/
        if (item.id !== el.id){
            return el
        }
+       return null
     })
     setAdmin(deleteFlt)
     Swal.fire(

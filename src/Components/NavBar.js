@@ -6,7 +6,7 @@ import FormControl from 'react-bootstrap/FormControl'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import axios from 'axios'
-import { useHistory, withRouter } from 'react-router-dom'
+
 
 
 
@@ -14,7 +14,7 @@ import { useHistory, withRouter } from 'react-router-dom'
 
 const NavBar=()=> {
   const [searchValue, setSearchValue] = useState("")
-    const history = useHistory()
+    
   
 const [category, setCategory] = useState([])
 

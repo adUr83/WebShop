@@ -1,10 +1,9 @@
 import React,{useState ,useEffect} from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import Button from 'react-bootstrap/Button'
-import Card from 'react-bootstrap/Card'
+
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+
 import Container from 'react-bootstrap/Container'
 import Product from './Product'
 
@@ -25,6 +24,7 @@ useEffect(() => {
                if(el.categoryId===Number(params.id)){
                    return el
                }
+               return null
            })
            if(temp.length> 0 ){
             fltData.push(element)
@@ -35,7 +35,7 @@ useEffect(() => {
         })   
 
 
-}, [])
+}, [params.id])
 
 const filterHtml = categories.map((item,index)=>{
     return(

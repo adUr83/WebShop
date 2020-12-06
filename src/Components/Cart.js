@@ -76,7 +76,11 @@ const deleteItem =(item)=>{
  
   let  temp = orders.filter((el)=>{
    if(el.id!==item.id)
-return el
+   {
+    return el
+   }
+   return null;
+
   }) 
 
 

@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import Product from './Product'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+
 import Container from 'react-bootstrap/Container'
 
 
@@ -21,6 +21,7 @@ useEffect(() => {
          if(item.name.toLowerCase().includes(params.name.toLowerCase())) {
              return item
          }
+         return null;
 
         //  if(params.name ===item.name)
      })
@@ -28,7 +29,7 @@ useEffect(() => {
         })  
 
 
-}, [])
+}, [params.name])
 
 let renderHtml = searchProduct.map((item,index)=>{
     return (
